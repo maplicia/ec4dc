@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_9f5ba212845df11830b294091f75ed84 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+    
+                    <style>
+                        .foliumpopup {
+                            margin: auto;
+                        }
+                       .foliumpopup table{
+                            margin: auto;
+                        }
+                        .foliumpopup tr{
+                            text-align: left;
+                        }
+                        .foliumpopup th{
+                            padding: 2px; padding-right: 8px;
+                        }
+                    </style>
+            
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_9f5ba212845df11830b294091f75ed84" ></div>
+        
+</body>
+<script>
+
+    
+            var map_9f5ba212845df11830b294091f75ed84 = L.map(
+                "map_9f5ba212845df11830b294091f75ed84",
+                {
+                    center: [38.9072, -77.0369],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 12,
+                    zoomControl: true,
+                    preferCanvas: false,
+                    icon: "icon.png",
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_bd69f5b586a07f96e7d5a1c89a82621d = L.tileLayer(
+                "https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca target=\"_blank\" href=\"http://cartodb.com/attributions\"\u003eCartoDB\u003c/a\u003e, CartoDB \u003ca target=\"_blank\" href =\"http://cartodb.com/attributions\"\u003eattributions\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_9f5ba212845df11830b294091f75ed84);
+        
+        
+
+        function geo_json_fe9a7640a86505dfe85f15aaf4fdde70_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        
+        var smallIcon = new L.Icon({
+     iconSize: [50, 50],
+     iconUrl: 'icon.png'
+ });
+            
+
+        
+        var geo_json_fe9a7640a86505dfe85f15aaf4fdde70 = L.geoJson(null, {
+                onEachFeature: geo_json_fe9a7640a86505dfe85f15aaf4fdde70_onEachFeature,
+                pointToLayer: function (feature, latlng) {
+            return L.marker(latlng, {icon: smallIcon});
+      }
+            
+        });
+
+        function geo_json_fe9a7640a86505dfe85f15aaf4fdde70_add (data) {
+            geo_json_fe9a7640a86505dfe85f15aaf4fdde70
+                .addData(data)
+                .addTo(map_9f5ba212845df11830b294091f75ed84);
+        }
+            geo_json_fe9a7640a86505dfe85f15aaf4fdde70_add({"bbox": [-77.04167607, 38.88280434, -76.99467261, 38.9567279], "features": [{"bbox": [-77.04167607, 38.9203803, -77.04167607, 38.9203803], "geometry": {"coordinates": [-77.04167607, 38.9203803], "type": "Point"}, "id": "0", "properties": {"address": "2319 18th St NW, Washington, DC 20009", "lat": "38.9203803", "link": "", "long": "-77.04167607", "name": "A League of Her Own", "notes": ""}, "type": "Feature"}, {"bbox": [-76.99467261, 38.88280434, -76.99467261, 38.88280434], "geometry": {"coordinates": [-76.99467261, 38.88280434], "type": "Point"}, "id": "1", "properties": {"address": "500 8th St SE, Washington, DC 20003", "lat": "38.88280434", "link": "", "long": "-76.99467261", "name": "as you are.", "notes": ""}, "type": "Feature"}, {"bbox": [-77.02276181, 38.9567279, -77.02276181, 38.9567279], "geometry": {"coordinates": [-77.02276181, 38.9567279], "type": "Point"}, "id": "2", "properties": {"address": "711 Kennedy St NW, Washington, DC 20011", "lat": "38.9567279", "link": "", "long": "-77.02276181", "name": "ANXO", "notes": ""}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+    geo_json_fe9a7640a86505dfe85f15aaf4fdde70.bindPopup(
+    function(layer){
+    let div = L.DomUtil.create('div');
+    
+    let handleObject = feature=>typeof(feature)=='object' ? JSON.stringify(feature) : feature;
+    let fields = ["name", "address"];
+    let aliases = ["name", "address"];
+    let table = '<table>' +
+        String(
+        fields.map(
+        (v,i)=>
+        `<tr>
+            <th>${aliases[i].toLocaleString()}</th>
+            
+            <td>${handleObject(layer.feature.properties[v]).toLocaleString()}</td>
+        </tr>`).join(''))
+    +'</table>';
+    div.innerHTML=table;
+    
+    return div
+    }
+    ,{"className": "foliumpopup"});
+                     
+</script>
+</html>
